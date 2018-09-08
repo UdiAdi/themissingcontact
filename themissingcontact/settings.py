@@ -129,10 +129,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-if os.environ.get('ENV') == 'prod':
-    PROJECT_DIR = "/home/themissingcontact/themissingcontact"
-else:
+if os.environ.get('ENV') == 'dev':
     PROJECT_DIR = "/home/udit/tmc/themissingcontact"
+else:
+    PROJECT_DIR = "/home/themissingcontact/themissingcontact"
 
 
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
