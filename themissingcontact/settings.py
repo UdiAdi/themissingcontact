@@ -129,9 +129,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-SOURCE_FILE = "/etc/profile.d/tmc"
-if os.path.exists(SOURCE_FILE):
-    PROJECT_DIR = os.environ.get('TMC_SRC')
+if os.environ.get('ENV') == 'prod':
+    PROJECT_DIR = "/home/themissingcontact/themissingcontact"
 else:
     PROJECT_DIR = "/home/udit/tmc/themissingcontact"
 
