@@ -8,9 +8,24 @@
     <link rel="stylesheet" href='{% static "materialize/css/materialize.min.css" %}'/>
     <link rel="stylesheet" href='{% static "css/firstcss.css" %}'/>
 
+    <script type="text/javascript" src='{% static "materialize/js/materialize.min.js" %}'></script>
+    <script type="text/javascript" src='{% static "js/jquery-3.1.0.min.js" %}'></script>
+
 </head>
 <body>
-    <h1>Header</h1>
+    <div style="position: absolute; z-index: -1; background-color: white; text-align: center; width: 100%">
+        <h1>Header</h1>
+    </div>
+
     {% block content %}{% endblock %}
+
+    {% block extra_scripts %}
+        <script>
+            jQuery('.datetimepicker').datetimepicker({
+                format: 'Y-m-d H:i'
+            });
+        </script>
+    {% endblock %}
+
 </body>
 </html>
