@@ -8,39 +8,41 @@
     <link rel="stylesheet" href='{% static "materialize/css/materialize.min.css" %}'/>
     <link rel="stylesheet" href='{% static "css/firstcss.css" %}'/>
 
-    <script type="text/javascript" src='{% static "js/jquery-3.1.0.min.js" %}'></script>
+    {#    <script type="text/javascript" src='{% static "js/jquery-3.1.0.min.js" %}'></script>#}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src='{% static "materialize/js/materialize.min.js" %}'></script>
 
 
 </head>
 <body>
-    <div style="position: absolute; z-index: -1; background-color: white; text-align: center; width: 100%">
-        <nav class="green">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo center">Logo</a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down ulclass">
-                    <li><a href="">One<span style="visibility: hidden">xxxxxxxxx</span></a></li>
-                    <li><a href="">Two</a></li>
-                    <li><a href="">Three</a></li>
-                </ul>
-                <ul id="nav-mobile" class="right hide-on-med-and-down ulclass">
-                    <li><a href="">Four</a></li>
-                    <li><a href="">Five</a></li>
-                    <li><a href="">Six</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+<div style="position: absolute; z-index: -1; background-color: white; text-align: center; width: 100%">
+    <nav class="green">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Logo</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down ulclass">
+                <li><a href="">One<span style="visibility: hidden">xxxxxxxxx</span></a></li>
+                <li><a href="">Two</a></li>
+                <li><a href="">Three</a></li>
+            </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down ulclass">
+                <li><a href="">Four</a></li>
+                <li><a href="">Five</a></li>
+                <li><a href="">Six</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
-    {% block content %}{% endblock %}
+{% block content %}{% endblock %}
 
-    {% block extra_scripts %}
-        <script>
-            jQuery('.datetimepicker').datetimepicker({
-                format: 'Y-m-d H:i'
-            });
-        </script>
-    {% endblock %}
+{% block extra_scripts %}
+    <script>
+        jQuery('.datetimepicker').datetimepicker({
+            format: 'Y-m-d H:i'
+        });
+    </script>
+{% endblock %}
 
 </body>
 </html>
