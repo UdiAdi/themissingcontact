@@ -130,7 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 if os.environ.get('ENV') == 'dev':
-    PROJECT_DIR = "/home/udit/tmc/themissingcontact"
+    PROJECT_DIR = "/Users/udit/Desktop/udit_personal/pexp/themissingcontact"
 else:
     PROJECT_DIR = "/home/themissingcontact/themissingcontact"
 
