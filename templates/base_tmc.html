@@ -5,44 +5,35 @@
     <meta charset="utf-8"/>
     <title>TMC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href='{% static "materialize/css/materialize.min.css" %}'/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+
     <link rel="stylesheet" href='{% static "css/firstcss.css" %}'/>
-
-    {#    <script type="text/javascript" src='{% static "js/jquery-3.1.0.min.js" %}'></script>#}
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src='{% static "materialize/js/materialize.min.js" %}'></script>
-
+{#    <script type="text/javascript" src='{% static "materialize/js/materialize.min.js" %}'></script>#}
 
 </head>
 <body>
-<div style="position: absolute; z-index: -1; background-color: white; text-align: center; width: 100%">
-    <nav class="green">
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Logo</a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down ulclass">
-                <li><a href="">One<span style="visibility: hidden">xxxxxxxxx</span></a></li>
-                <li><a href="">Two</a></li>
-                <li><a href="">Three</a></li>
-            </ul>
-            <ul id="nav-mobile" class="right hide-on-med-and-down ulclass">
-                <li><a href="">Four</a></li>
-                <li><a href="">Five</a></li>
-                <li><a href="">Six</a></li>
-            </ul>
-        </div>
-    </nav>
-</div>
 
-{% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
-{% block extra_scripts %}
-    <script>
-        jQuery('.datetimepicker').datetimepicker({
-            format: 'Y-m-d H:i'
-        });
-    </script>
-{% endblock %}
+    {% block extra_scripts %}
+        <script>
+
+        </script>
+    {% endblock %}
 
 </body>
 </html>
