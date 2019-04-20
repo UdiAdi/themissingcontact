@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+class BandMembers(models.Model):
+    full_name = models.CharField(max_length=50, null=False)
+    nick_name = models.CharField(max_length=10, null=False)
+    password = models.CharField(max_length=50, null=False)
