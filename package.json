@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development ./themissingcontact/frontend/src/index.js --output ./themissingcontact/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./themissingcontact/frontend/src/index.js --output ./themissingcontact/frontend/static/frontend/main.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/UdiAdi/themissingcontact/issues"
   },
-  "homepage": "https://github.com/UdiAdi/themissingcontact#readme"
+  "homepage": "https://github.com/UdiAdi/themissingcontact#readme",
+  "devDependencies": {
+    "weak-key": "^1.0.1"
+  },
+  "dependencies": {
+    "webpack": "^4.30.0"
+  }
 }
