@@ -1,9 +1,6 @@
-from firstapp.models import BandMembers
-from firstapp.serializers import BandMemberSerializer
-from rest_framework import generics
+from django.shortcuts import render
+from django.shortcuts import redirect
 
-
-class MembersList(generics.ListCreateAPIView):
-    queryset = BandMembers.objects.all()
-    serializer_class = BandMemberSerializer
+def firstapp_view(request):
+    return render(request, 'firstapp/first_page.html')
 

@@ -1,6 +1,6 @@
-from django.urls import path
+from django.conf.urls import include, url
 from firstapp import views
 
 urlpatterns = [
-    path(r'', views.MembersList.as_view(), name="members_list"),
+    url(r'^$', views.firstapp_view, name="firstapp_view"),
    ]
